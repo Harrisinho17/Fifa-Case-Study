@@ -40,68 +40,61 @@ The last step is to prepare the process to automatize future reports with simila
 - **Visualization**: Tableau
 
 
-## Project Structure
+# Project Structure
+
+## Code
 
 ### Python
 `1.Transpose_Data.py`
 - **Purpose**: The script transposes CSV files with a ‘Date’ column, copies “case_management.csv” unchanged, and saves them to an output folder. It skips files without a ‘Date’ column and logs the process. 
-
 `2.Rename_Column.py`
 - **Purpose**: This script renames the first column to “Date” in all CSV files in a folder and saves the updates, ensuring consistency across files.
-
 `3.Standardize_Columns.py`
 - **Purpose**: This script processes all CSV files in a folder by standardizing column names (making them lowercase, removing special characters, and handling duplicates), renaming the first column to “date,” converting it to a standardized date format, and saving the updates. It ensures consistent and clean data across all files.
-
 `4.Cleaned.py`
 - **Purpose**: Processes CSV files by removing unnamed columns and adjusting “case_management.csv” by deleting its first row. Cleaned files are saved in a new folder with “cleaned_” added to their filenames.
-
 `ETL.py`
 - **Purpose**: This script uploads cleaned CSV files to a PostgreSQL database, matching each file to a specific table. Date columns are updated to Date datatypes. It logs success or missing files, ensuring all available data is imported into the database.
 
-
 ### SQL
-#### Case Management
-- `total_cases_view.sql`
-- **Purpose**: Create a view of total sum of recieved ticket issues on all streams of information in 2022.
+Case Management
+    - `total_cases_view.sql`
+    - **Purpose**: Create a view of total sum of recieved ticket issues on all streams of information in 2022.
+    - `cases_by_language.sql`
+    - **Purpose**: SUM of instances by language. 
 
-- `cases_by_language.sql`
-- **Purpose**: SUM of instances by language. 
-
-
-#### Languages
-- `daily_peaks.sql`
-- **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
-
-- `weekly_peaks.sql`
-- **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language.
-
-- `monthly_peaks.sql`
-- **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
+Languages
+    - `daily_peaks.sql`
+    - **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
+    - `weekly_peaks.sql`
+    - **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language.
+    - `monthly_peaks.sql`
+    - **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
 
 
 #### Total IVR
-- `1_1_total_daily_peaks.sql`
-- **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset. 
-
-- `1_1_total_monthly_peaks.sql`
+    - `1_1_total_daily_peaks.sql`
+- **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset.
+  
+    - `1_1_total_monthly_peaks.sql`
 - **Purpose**: Retrieves the Monthly instances of IVR usage in the Total_IVR dataset.
-
-- `1_1_total_weekly_peaks.sql` 
-- **Purpose**: Retrieves the Weekly instances of IVR usage in the Total_IVR dataset. 
-
-- `1_2_total_topics.sql`
+  
+    - `1_1_total_weekly_peaks.sql` 
+- **Purpose**: Retrieves the Weekly instances of IVR usage in the Total_IVR dataset.
+  
+    - `1_2_total_topics.sql`
 - **Purpose**: Retrieves the amount of interactions by topics ordering by DESC.
-
-- `1_3_total_IVR_effectiveness.sql`
-- **Purpose**: Retrieves the overall effectiveness of the IVR program. 
-
-- `1_4_total_stddev_by_topic.sql`
-- **Purpose**: Retrieves the standard deviation of topics. 
-
-- `1_5_total_weeks_and_weekends.sql` 
-- **Purpose**: Retrieves a weeks and weekends analysis breaking down the days with the most instances of IVR usage. 
-
-- `2_2_percentage_by_topic.sql`
+  
+    - `1_3_total_IVR_effectiveness.sql`
+- **Purpose**: Retrieves the overall effectiveness of the IVR program.
+  
+    - `1_4_total_stddev_by_topic.sql`
+- **Purpose**: Retrieves the standard deviation of topics.
+  
+    - `1_5_total_weeks_and_weekends.sql` 
+- **Purpose**: Retrieves a weeks and weekends analysis breaking down the days with the most instances of IVR usage.
+  
+    - `2_2_percentage_by_topic.sql`
 - **Purpose**: Retrieves the percentage of total IVR usage by topic. 
 
 ### Data 
