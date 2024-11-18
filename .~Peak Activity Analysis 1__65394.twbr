@@ -1,0 +1,732 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0711.1636                               -->
+<workbook original-version='18.1' source-build='2024.2.1 (20242.24.0711.1636)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='1_1_total_daily_peaks' inline='true' name='federated.0wlm6w704kig451benk0j1l83bj5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='1_1_total_daily_peaks' name='textscan.0c4ehlo0g8e1151gnazev0wen1d4'>
+            <connection class='textscan' directory='/Users/aharris/Desktop/Fifa Case Study/Data/AnalyzedData/Total_IVR' filename='1_1_total_daily_peaks.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0c4ehlo0g8e1151gnazev0wen1d4' name='1_1_total_daily_peaks.csv' table='[1_1_total_daily_peaks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='integer' name='instances' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0c4ehlo0g8e1151gnazev0wen1d4' name='1_1_total_daily_peaks.csv' table='[1_1_total_daily_peaks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='date' ordinal='0' />
+            <column datatype='integer' name='instances' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[1_1_total_daily_peaks.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[1_1_total_daily_peaks.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_daily_peaks.csv_1175D10EA5E84C8BA3BFA1CC764ED478]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instances</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[instances]</local-name>
+            <parent-name>[1_1_total_daily_peaks.csv]</parent-name>
+            <remote-alias>instances</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_daily_peaks.csv_1175D10EA5E84C8BA3BFA1CC764ED478]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='1_1_total_daily_peaks.csv' datatype='table' name='[__tableau_internal_object_id__].[1_1_total_daily_peaks.csv_1175D10EA5E84C8BA3BFA1CC764ED478]' role='measure' type='quantitative' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Instances' datatype='integer' name='[instances]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/0j/wmmr3l810bs8dt9qx_q0xcnc0000gp/T/tableau-temp/#TableauTemp_1bx7d7s0m2kzg516yjbab1duceco.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/17/2024 11:51:08 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>1_1_total_daily_peaks.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>365</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_daily_peaks.csv_1175D10EA5E84C8BA3BFA1CC764ED478]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>instances</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[instances]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>instances</remote-alias>
+              <ordinal>1</ordinal>
+              <family>1_1_total_daily_peaks.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>164</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_daily_peaks.csv_1175D10EA5E84C8BA3BFA1CC764ED478]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='1_1_total_daily_peaks.csv' id='1_1_total_daily_peaks.csv_1175D10EA5E84C8BA3BFA1CC764ED478'>
+            <properties context=''>
+              <relation connection='textscan.0c4ehlo0g8e1151gnazev0wen1d4' name='1_1_total_daily_peaks.csv' table='[1_1_total_daily_peaks#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='instances' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='1_1_total_weekly_peaks' inline='true' name='federated.13grsej13bg0wj14li0m115t5y7s' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='1_1_total_weekly_peaks' name='textscan.0mtaf3z1f0dhbz15zxhq80yjx1kt'>
+            <connection class='textscan' directory='/Users/aharris/Desktop/Fifa Case Study/Data/AnalyzedData/Total_IVR' filename='1_1_total_weekly_peaks.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0mtaf3z1f0dhbz15zxhq80yjx1kt' name='1_1_total_weekly_peaks.csv' table='[1_1_total_weekly_peaks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ssZ' name='week_start' ordinal='0' />
+            <column datatype='integer' name='instances' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0mtaf3z1f0dhbz15zxhq80yjx1kt' name='1_1_total_weekly_peaks.csv' table='[1_1_total_weekly_peaks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ssZ' name='week_start' ordinal='0' />
+            <column datatype='integer' name='instances' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[1_1_total_weekly_peaks.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>week_start</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[week_start]</local-name>
+            <parent-name>[1_1_total_weekly_peaks.csv]</parent-name>
+            <remote-alias>week_start</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_weekly_peaks.csv_00559CACFB4F4139B2E69DB84954EA3D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instances</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[instances]</local-name>
+            <parent-name>[1_1_total_weekly_peaks.csv]</parent-name>
+            <remote-alias>instances</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_weekly_peaks.csv_00559CACFB4F4139B2E69DB84954EA3D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='1_1_total_weekly_peaks.csv' datatype='table' name='[__tableau_internal_object_id__].[1_1_total_weekly_peaks.csv_00559CACFB4F4139B2E69DB84954EA3D]' role='measure' type='quantitative' />
+      <column caption='Instances' datatype='integer' name='[instances]' role='measure' type='quantitative' />
+      <column caption='Week Start' datatype='date' datatype-customized='true' name='[week_start]' role='dimension' type='ordinal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/0j/wmmr3l810bs8dt9qx_q0xcnc0000gp/T/tableau-temp/#TableauTemp_0ejief61qly7z71bny0ql19r1njs.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/17/2024 11:51:28 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ssZ' name='week_start' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ssZ' name='week_start' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>week_start</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[week_start]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>week_start</remote-alias>
+              <ordinal>0</ordinal>
+              <family>1_1_total_weekly_peaks.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_weekly_peaks.csv_00559CACFB4F4139B2E69DB84954EA3D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>instances</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[instances]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>instances</remote-alias>
+              <ordinal>1</ordinal>
+              <family>1_1_total_weekly_peaks.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>51</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_weekly_peaks.csv_00559CACFB4F4139B2E69DB84954EA3D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='week_start' />
+        <field-sort-custom-order field='Calculation_4601693672460185601' />
+        <field-sort-custom-order field='Calculation_4601693672459935744' />
+        <field-sort-custom-order field='instances' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='1_1_total_weekly_peaks.csv' id='1_1_total_weekly_peaks.csv_00559CACFB4F4139B2E69DB84954EA3D'>
+            <properties context=''>
+              <relation connection='textscan.0mtaf3z1f0dhbz15zxhq80yjx1kt' name='1_1_total_weekly_peaks.csv' table='[1_1_total_weekly_peaks#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ssZ' name='week_start' ordinal='0' />
+                  <column datatype='integer' name='instances' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy-MM-dd HH:mm:ssZ' name='week_start' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='1_1_total_monthly_peaks' inline='true' name='federated.0nlb6ws0ogb0f615j1bzr0ptob3y' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='1_1_total_monthly_peaks' name='textscan.1mxblwb04tye261ft29k40uai2if'>
+            <connection class='textscan' directory='/Users/aharris/Desktop/Fifa Case Study/Data/AnalyzedData/Total_IVR' filename='1_1_total_monthly_peaks.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1mxblwb04tye261ft29k40uai2if' name='1_1_total_monthly_peaks.csv' table='[1_1_total_monthly_peaks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy-MM-HH mm:ss:SS-dd' name='month_start' ordinal='0' />
+            <column datatype='integer' name='instances' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1mxblwb04tye261ft29k40uai2if' name='1_1_total_monthly_peaks.csv' table='[1_1_total_monthly_peaks#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' date-parse-format='yyyy-MM-HH mm:ss:SS-dd' name='month_start' ordinal='0' />
+            <column datatype='integer' name='instances' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[1_1_total_monthly_peaks.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month_start</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[month_start]</local-name>
+            <parent-name>[1_1_total_monthly_peaks.csv]</parent-name>
+            <remote-alias>month_start</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_monthly_peaks.csv_AA13B811AB44402F8F68AD3E20E05E36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instances</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[instances]</local-name>
+            <parent-name>[1_1_total_monthly_peaks.csv]</parent-name>
+            <remote-alias>instances</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_monthly_peaks.csv_AA13B811AB44402F8F68AD3E20E05E36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='1_1_total_monthly_peaks.csv' datatype='table' name='[__tableau_internal_object_id__].[1_1_total_monthly_peaks.csv_AA13B811AB44402F8F68AD3E20E05E36]' role='measure' type='quantitative' />
+      <column caption='Instances' datatype='integer' name='[instances]' role='measure' type='quantitative' />
+      <column caption='Month Start' datatype='date' datatype-customized='true' name='[month_start]' role='dimension' type='ordinal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/0j/wmmr3l810bs8dt9qx_q0xcnc0000gp/T/tableau-temp/#TableauTemp_1vphfro1p9zwsk13ip43n00ipf4u.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='11/17/2024 11:51:19 PM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy-MM-HH mm:ss:SS-dd' name='month_start' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table'>
+            <columns>
+              <column datatype='date' date-parse-format='yyyy-MM-HH mm:ss:SS-dd' name='month_start' />
+            </columns>
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>month_start</remote-name>
+              <remote-type>7</remote-type>
+              <local-name>[month_start]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month_start</remote-alias>
+              <ordinal>0</ordinal>
+              <family>1_1_total_monthly_peaks.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_monthly_peaks.csv_AA13B811AB44402F8F68AD3E20E05E36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>instances</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[instances]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>instances</remote-alias>
+              <ordinal>1</ordinal>
+              <family>1_1_total_monthly_peaks.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[1_1_total_monthly_peaks.csv_AA13B811AB44402F8F68AD3E20E05E36]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='1_1_total_monthly_peaks.csv' id='1_1_total_monthly_peaks.csv_AA13B811AB44402F8F68AD3E20E05E36'>
+            <properties context=''>
+              <relation connection='textscan.1mxblwb04tye261ft29k40uai2if' name='1_1_total_monthly_peaks.csv' table='[1_1_total_monthly_peaks#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' date-parse-format='yyyy-MM-HH mm:ss:SS-dd' name='month_start' ordinal='0' />
+                  <column datatype='integer' name='instances' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table'>
+                <columns>
+                  <column datatype='date' date-parse-format='yyyy-MM-HH mm:ss:SS-dd' name='month_start' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Day'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='1_1_total_daily_peaks' name='federated.0wlm6w704kig451benk0j1l83bj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0wlm6w704kig451benk0j1l83bj5'>
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Instances' datatype='integer' name='[instances]' role='measure' type='quantitative' />
+            <column-instance column='[instances]' derivation='Sum' name='[sum:instances:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0wlm6w704kig451benk0j1l83bj5].[sum:instances:qk]</rows>
+        <cols>[federated.0wlm6w704kig451benk0j1l83bj5].[tdy:date:qk]</cols>
+      </table>
+      <simple-id uuid='{5F8A8379-ACD2-4B65-A99C-CA9DFF277143}' />
+    </worksheet>
+    <worksheet name='Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='1_1_total_monthly_peaks' name='federated.0nlb6ws0ogb0f615j1bzr0ptob3y' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0nlb6ws0ogb0f615j1bzr0ptob3y'>
+            <column caption='Instances' datatype='integer' name='[instances]' role='measure' type='quantitative' />
+            <column-instance column='[month_start]' derivation='Month' name='[mn:month_start:qk]' pivot='key' type='quantitative' />
+            <column caption='Month Start' datatype='date' datatype-customized='true' name='[month_start]' role='dimension' type='ordinal' />
+            <column-instance column='[instances]' derivation='Sum' name='[sum:instances:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0nlb6ws0ogb0f615j1bzr0ptob3y].[sum:instances:qk]</rows>
+        <cols>[federated.0nlb6ws0ogb0f615j1bzr0ptob3y].[mn:month_start:qk]</cols>
+      </table>
+      <simple-id uuid='{0ED8748B-2653-4E4C-858B-DF0AE3981B95}' />
+    </worksheet>
+    <worksheet name='Week'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Week</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='1_1_total_weekly_peaks' name='federated.13grsej13bg0wj14li0m115t5y7s' />
+          </datasources>
+          <datasource-dependencies datasource='federated.13grsej13bg0wj14li0m115t5y7s'>
+            <column caption='Instances' datatype='integer' name='[instances]' role='measure' type='quantitative' />
+            <column-instance column='[week_start]' derivation='None' name='[none:week_start:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[instances]' derivation='Sum' name='[sum:instances:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[week_start]' derivation='Week-Trunc' name='[twk:week_start:qk]' pivot='key' type='quantitative' />
+            <column caption='Week Start' datatype='date' datatype-customized='true' name='[week_start]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.13grsej13bg0wj14li0m115t5y7s].[none:week_start:qk]' included-values='in-range'>
+            <min>#2022-12-31#</min>
+            <max>#2023-12-25#</max>
+          </filter>
+          <slices>
+            <column>[federated.13grsej13bg0wj14li0m115t5y7s].[none:week_start:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.13grsej13bg0wj14li0m115t5y7s].[sum:instances:qk]</rows>
+        <cols>[federated.13grsej13bg0wj14li0m115t5y7s].[twk:week_start:qk]</cols>
+      </table>
+      <simple-id uuid='{57B16197-CF48-4631-B9F9-564448BD4461}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98032' id='3' param='vert' type-v2='layout-flow' w='49385' x='615' y='984'>
+            <zone forceUpdate='true' h='9102' id='9' type-v2='text' w='49385' x='615' y='984'>
+              <formatted-text>
+                <run bold='true' fontalignment='1' fontcolor='#000000' fontsize='36' italic='true'>Peak Instances Analysis</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone forceUpdate='true' h='10209' id='10' type-v2='text' w='49385' x='615' y='10086'>
+              <formatted-text>
+                <run fontcolor='#000000' fontsize='16'>What are the daily, weekly, and monthly peak periods for customer inqueries? </run>
+                <run>Æ&#10;&#10;</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='98032' id='5' param='vert' type-v2='layout-flow' w='49385' x='50000' y='984'>
+            <zone h='32677' id='6' name='Day' w='49385' x='50000' y='984'>
+              <layout-cache minheight='198' minwidth='159' type-h='scalable' type-w='scalable' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='32677' id='7' name='Week' w='49385' x='50000' y='33661'>
+              <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='32677' id='8' name='Month' w='49385' x='50000' y='66338'>
+              <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{6C827E85-FDFA-4DD8-AE44-AA0975D9BFE7}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='72'>
+    <window class='worksheet' maximized='true' name='Week'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D55FA048-66CF-4806-A2BE-E4462EEDB70A}' />
+    </window>
+    <window class='worksheet' name='Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DE49CF5C-738C-4F84-AF9C-A244442E24B4}' />
+    </window>
+    <window class='worksheet' name='Day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{184B09AF-02F3-4D41-A4EB-9F995ABF7EE9}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Month'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Week'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{E9CF8107-DD54-4151-9300-55609E8B9109}' />
+    </window>
+  </windows>
+</workbook>
