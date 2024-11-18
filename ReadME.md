@@ -1,6 +1,6 @@
 # Specialist Ticketing Engineer, FIFA World Cup 2026 - Alexander Harris 
 
-## Overview
+# Overview
 The expectation is that the candidate will be able to:
 
 Analyze the data to be prepared to answer some questions about the trends, such as: What are the peak seasons, do we have more calls/casses during weekdays or weeknds, etc. 
@@ -10,25 +10,25 @@ It is also expected from the cnadidate to be able to identify some other trends 
 The last step is to prepare the process to automatize future reports with similar data. 
 
 
-## Key Questions
+# Key Questions
 
 ### Peak Activity Analysis
 1. **What are the daily, weekly, or monthly peak periods for customer inquiries?**
-    -  Per language (daily_peaks.sql, weekly_peaks.sql, monthly_peaks.sql), total_daily_peaks.sql, total_weekly_peaks.sql, total_monthly_peaks.sql
+    -  `Per language (daily_peaks.sql`, `weekly_peaks.sql, monthly_peaks.sql`, `total_daily_peaks.sql`, `total_weekly_peaks.sql`, `total_monthly_peaks.sql`
 2. **What are the top 5 IVR topics generating the most customer interactions?**
-    - top_five_topics.sql, total_top_five_topics.sql
+    - `top_five_topics.sql`, `total_top_five_topics.sql`
 3. **How effective is the IVR system in addressing customer questions before they escalate to an agent?**
-    - IVR_effectiveness,sql
+    - `IVR_effectiveness,sql`
 4. **Which IVR topic showed the greatest variability in daily interaction counts?**
-    - StdDev_by_topic.sql, total_stddev_by_topic.sql
+    - `StdDev_by_topic.sql`, `total_stddev_by_topic.sql`
 5. **Is there more interactions during the week or during the weeknd?**
-    - weeks_and_weeknds.sql, total_weeks_and_weeknds.sql
+    - `weeks_and_weeknds.sql`, `total_weeks_and_weeknds.sql`
 
 ### Language  Breakdown
 1. **What percentage of customer interactions come from each language?**
-    - percentage_by_language.sql
+    - `percentage_by_language.sql`
 2. **What percentage of total interactions is contributed by each IVR topic?**
-    - percentage_by_toppic.sql
+    - `percentage_by_toppic.sql`
 
 
 
@@ -38,24 +38,6 @@ The last step is to prepare the process to automatize future reports with simila
 - **Database**: PostgreSQL
 - **Notebook Environment**: VSCode
 - **Visualization**: Tableau
-
-# Conclusion 
-**Peak Instances Analysis** - 
-- Spanish
-- Arabic
-- English ( Had the most instances of IVR usage)
-- French
-- German
-- Total_IVR
-
-- total_ivr is different than the sum total of top 5 language IVR making it likely other langauges are involved that are not part of the data set I was given. 
-
-**Instances Analysis Dashboard** - 
-- instances of IVR usage are more apparent during the week rather than the weekend. 
-- IVR effectiveness is 84% with the total IVR dataset. 
-- Standard deviation of IVR instances show that "already Submitted_application" had the highest variablity meaning that interaction counts for these topics fluctuate significantly, possibly due to external factors (More analysis required). 
-
-**Language Breakdown**
 
 
 ## Project Structure
@@ -122,56 +104,56 @@ The last step is to prepare the process to automatize future reports with simila
 - `2_2_percentage_by_topic.sql`
 - **Purpose**: Retrieves the percentage of total IVR usage by topic. 
 
-### -Data 
+### Data 
 ### AnalyzedData
-#### Case Management 
-- `cases_by_language.csv`
-- `total_cases_view.csv`
+- Case Management 
+    - `cases_by_language.csv`
+    - `total_cases_view.csv`
 
-#### Languages
-##### 1_1_peak_analysis 
+- Languages
+1_1_peak_analysis 
 Arabic
-- `Ar_daily_peaks.csv`  
-- `Ar_monthly_peaks.csv`  
-- `Ar_weekly_peaks.csv`
+    - `Ar_daily_peaks.csv`  
+    - `Ar_monthly_peaks.csv`  
+    - `Ar_weekly_peaks.csv`
 
 English
-- `En_daily_peaks.csv`  
-- `En_monthly_peaks.csv`  
-- `En_weekly_peaks.csv`
+    - `En_daily_peaks.csv`  
+    - `En_monthly_peaks.csv`  
+    - `En_weekly_peaks.csv`
 
 French
-- `Fr_daily_peaks.csv`  
-- `Fr_monthly_peaks.csv`  
-- `Fr_weekly_peaks.csv`
+    - `Fr_daily_peaks.csv`  
+    - `Fr_monthly_peaks.csv`  
+    - `Fr_weekly_peaks.csv`
 
 German
-- `Ge_daily_peaks.csv`  
-- `Ge_monthly_peaks.csv`  
-- `Ge_weekly_peaks.csv`
+    - `Ge_daily_peaks.csv`  
+    - `Ge_monthly_peaks.csv`  
+    - `Ge_weekly_peaks.csv`
 
 Spanish
-- `Sp_daily_peaks.csv`  
-- `Sp_monthly_peaks.csv`  
-- `Sp_weekly_peaks.csv`
+    - `Sp_daily_peaks.csv`  
+    - `Sp_monthly_peaks.csv`  
+    - `Sp_weekly_peaks.csv`
 
-##### Top Five IVR
-- `1_3_IVR_effectiveness.csv`  
-- `1_4_stddev_by_topic.csv`  
-- `1_5_weeks_and_weekends.csv`  
-- `2_1_percentage_by_language.csv`  
-- `top_five_languages.csv`
+- Top Five IVR
+    - `1_3_IVR_effectiveness.csv`  
+    - `1_4_stddev_by_topic.csv`  
+    - `1_5_weeks_and_weekends.csv`  
+    - `2_1_percentage_by_language.csv`  
+    - `top_five_languages.csv`
 
-##### Total IVR
-- `1_1_total_daily_peaks.csv`  
-- `1_1_total_monthly_peaks.csv`  
-- `1_1_total_weekly_peaks.csv`  
-- `1_3_total_IVR_effectiveness.csv`  
-- `1_4_total_stddev_by_topics.csv`  
-- `2_2_percentage_by_topic.csv`
+- Total IVR
+    - `1_1_total_daily_peaks.csv`  
+    - `1_1_total_monthly_peaks.csv`  
+    - `1_1_total_weekly_peaks.csv`  
+    - `1_3_total_IVR_effectiveness.csv`  
+    - `1_4_total_stddev_by_topics.csv`  
+    - `2_2_percentage_by_topic.csv`
 
 
-### CleanedData
+### Cleaned Data
 - `cleaned_case_management.csv`
 - `cleaned_transposed_arabic_ivr.csv`
 - `cleaned_transposed_english_ivr.csv`
@@ -180,7 +162,7 @@ Spanish
 - `cleaned_transposed_spanish_ivr.csv`
 - `cleaned_transposed_total_ivr.csv`
 
-### RawData
+### Raw Data
 - `Arabic.IVR.csv`
 - `Case_Management.csv`
 - `Englsih_IVR.csv`
@@ -211,7 +193,23 @@ Spanish
 **Data Engineer Case.xlsx** 
 
 
+# Conclusion 
+**Peak Instances Analysis** - 
+- Spanish
+- Arabic
+- English ( Had the most instances of IVR usage)
+- French
+- German
+- Total_IVR
 
+- total_ivr is different than the sum total of top 5 language IVR making it likely other langauges are involved that are not part of the data set I was given. 
+
+**Instances Analysis Dashboard** - 
+- instances of IVR usage are more apparent during the week rather than the weekend. 
+- IVR effectiveness is 84% with the total IVR dataset. 
+- Standard deviation of IVR instances show that "already Submitted_application" had the highest variablity meaning that interaction counts for these topics fluctuate significantly, possibly due to external factors (More analysis required). 
+
+**Language Breakdown**
 
 
 
