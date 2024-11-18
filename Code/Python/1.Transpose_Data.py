@@ -1,8 +1,8 @@
 import pandas as pd
 import os
 
-input_folder = "/Users/aharris/Desktop/Fifa Case Study/Data/RawData"
-output_folder = "/Users/aharris/Desktop/Fifa Case Study/Data/TransposedData"
+input_folder = "/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/RawData"
+output_folder = "/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/TransposedData"
 
 os.makedirs(output_folder, exist_ok=True)
 

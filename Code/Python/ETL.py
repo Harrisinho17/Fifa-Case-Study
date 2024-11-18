@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 db_username = 'postgres'
-db_password = 'Mudkip'
+db_password = '******'
 db_host = 'localhost'
 db_port = '5432'
 db_name = 'FifaCaseStudy'
@@ -13,7 +13,7 @@ db_name = 'FifaCaseStudy'
 engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
 
 
-cleaned_data_path = Path('/Users/aharris/Desktop/Fifa Case Study/Data/CleanedData')
+cleaned_data_path = Path('/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/CleanedData')
 
 
 files_to_tables = {

@@ -3,7 +3,7 @@ import os
 import re
 
 # Define Path
-input_folder = "/Users/aharris/Desktop/Fifa Case Study/Data/TransposedData"
+input_folder = "/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/TransposedData"
 
 # Special Character handling 
 def clean_and_deduplicate_columns(columns):

@@ -2,8 +2,8 @@ import pandas as pd
 import os
 
 # Define paths
-input_folder = "/Users/aharris/Desktop/Fifa Case Study/Data/TransposedData"
-output_folder = "/Users/aharris/Desktop/Fifa Case Study/Data/CleanedData"
+input_folder = "/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/TransposedData"
+output_folder = "/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/CleanedData"
 os.makedirs(output_folder, exist_ok=True)
 
 def drop_unnamed_columns(data):

@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Define Path
-input_folder = "/Users/aharris/Desktop/Fifa Case Study/Data/TransposedData" 
+input_folder = "/Users/aharris/Documents/GitHub/Fifa-Case-Study/Data/TransposedData" 
 
 for filename in os.listdir(input_folder):
     if filename.endswith(".csv"):
