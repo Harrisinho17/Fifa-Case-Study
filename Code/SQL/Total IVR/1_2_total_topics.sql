@@ -143,5 +143,5 @@ SELECT
     topic,
     interactions
 FROM topic_totals
-ORDER BY interactions DESC
-LIMIT 5;
+ORDER BY interactions DESC;
+

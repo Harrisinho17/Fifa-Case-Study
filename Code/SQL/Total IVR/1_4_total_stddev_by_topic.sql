@@ -150,5 +150,4 @@ SELECT
     topic,
     variability
 FROM topic_variability
-ORDER BY variability DESC
-LIMIT 5;
+ORDER BY variability DESC;

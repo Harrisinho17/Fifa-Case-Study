@@ -14,29 +14,22 @@ The last step is to prepare the process to automatize future reports with simila
 
 ### Peak Activity Analysis
 1. **What are the daily, weekly, or monthly peak periods for customer inquiries?**
-    - daily_peaks.sql, weekly_peaks.sql, monthly_peaks.sql
-2. **What are the top 3 IVR topics generating the most customer interactions?**
-    
-3. **What are the most frequently selected IVR topics across all languages?**
+    -  Per language (daily_peaks.sql, weekly_peaks.sql, monthly_peaks.sql), total_daily_peaks.sql, total_weekly_peaks.sql, total_monthly_peaks.sql
+2. **What are the top 5 IVR topics generating the most customer interactions?**
+    - top_five_topics.sql, total_top_five_topics.sql
+3. **How effective is the IVR system in addressing customer questions before they escalate to an agent?**
+    - IVR_effectiveness,sql
+4. **Which IVR topic showed the greatest variability in daily interaction counts?**
+    - StdDev_by_topic.sql, total_stddev_by_topic.sql
+5. **Is there more interactions during the week or during the weeknd?**
+    - weeks_and_weeknds.sql, total_weeks_and_weeknds.sql
 
-4. **How effective is the IVR system in addressing customer questions before they escalate to an agent?**
-
-5. **Which IVR topic showed the greatest variability in daily interaction counts?**
-
-### Language and Region Breakdown
+### Language  Breakdown
 1. **What percentage of customer interactions come from each language?**
-
+    - percentage_by_language.sql
 2. **What percentage of total interactions is contributed by each IVR topic?**
+    - percentage_by_toppic.sql
 
-3. **Which topics or interaction types are disproportionately higher in specific languages?**
-
-4. **Which language’s dataset has the highest average interactions per topic per day?**
-
-
-### Trends and Insights
-1. **What are the top 3 most consistent IVR topics across all dates?**
-
-2. **What issues or questions are most frequent, and how do they vary by region or language?**
 
 
 ## Tools and Technologies
@@ -47,8 +40,22 @@ The last step is to prepare the process to automatize future reports with simila
 - **Visualization**: Tableau
 
 # Conclusion 
-- total_ivr is different than the sum total of top 5 language IVR making it likely other langauges are involved that are not part of the data set i was given. 
+**Peak Instances Analysis** - 
+- Spanish
+- Arabic
+- English ( Had the most instances of IVR usage)
+- French
+- German
+- Total_IVR
 
+- total_ivr is different than the sum total of top 5 language IVR making it likely other langauges are involved that are not part of the data set I was given. 
+
+**Instances Analysis Dashboard** - 
+- instances of IVR usage are more apparent during the week rather than the weekend. 
+- IVR effectiveness is 84% with the total IVR dataset. 
+- Standard deviation of IVR instances show that "already Submitted_application" had the highest variablity meaning that interaction counts for these topics fluctuate significantly, possibly due to external factors (More analysis required). 
+
+**Language Breakdown**
 
 
 ## Project Structure

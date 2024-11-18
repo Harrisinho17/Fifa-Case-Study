@@ -1,16 +1,16 @@
 WITH topic_totals AS (
     SELECT
-        'already_submitted_application' AS topic,
+        'total_already_submitted_application' AS topic,
         SUM(total_already_submitted_application) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'status_of_ticket_application' AS topic,
+        'total_status_of_ticket_application' AS topic,
         SUM(total_status_of_ticket_application) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'connection_with_agent' AS topic,
+        'total_connection_with_agent' AS topic,
         SUM(
 		total_connection_with_agent +
 		total_connection_with_agent_2
@@ -18,12 +18,12 @@ WITH topic_totals AS (
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'how_to_check_the_status' AS topic,
+        'total_how_to_check_the_status' AS topic,
         SUM(total_how_to_check_the_status) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'return_to_main_menu' AS topic,
+        'total_return_to_main_menu' AS topic,
         SUM(
             total_return_to_main_menu +
             total_return_to_main_menu_2 +
@@ -34,22 +34,22 @@ WITH topic_totals AS (
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'how_to_complete_or_submit_an_application' AS topic,
+        'total_how_to_complete_or_submit_an_application' AS topic,
         SUM(total_how_to_complete_or_submit_an_application) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'ticket_application_process' AS topic,
+        'total_ticket_application_process' AS topic,
         SUM(total_ticket_application_process) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'online_process' AS topic,
+        'total_online_process' AS topic,
         SUM(total_online_process) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'household_restrictions' AS topic,
+        'total_household_restrictions' AS topic,
         SUM(
 		total_household_restrictions +
 		total_household_restrictions_2 +
@@ -58,84 +58,84 @@ WITH topic_totals AS (
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'other_information_for_the_process' AS topic,
+        'total_other_information_for_the_process' AS topic,
         SUM(total_other_information_for_the_process) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'the_personal_details' AS topic,
+        'total_the_personal_details' AS topic,
         SUM(total_the_personal_details) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'types_of_accessibility_tickets' AS topic,
+        'total_types_of_accessibility_tickets' AS topic,
         SUM(total_types_of_accessibility_tickets) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'information_about_ticket_sales' AS topic,
+        'total_information_about_ticket_sales' AS topic,
         SUM(total_information_about_ticket_sales) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'ticket_products' AS topic,
+        'total_ticket_products' AS topic,
         SUM(total_ticket_products) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'sales_phases' AS topic,
+        'total_sales_phases' AS topic,
         SUM(total_sales_phases) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'ticket_categories' AS topic,
+        'total_ticket_categories' AS topic,
         SUM(total_ticket_categories) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'ticket_prices' AS topic,
+        'total_ticket_prices' AS topic,
         SUM(total_ticket_prices) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'confirmed_tickets' AS topic,
+        'total_confirmed_tickets' AS topic,
         SUM(total_confirmed_tickets) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'payment_methods' AS topic,
+        'total_payment_methods' AS topic,
         SUM(total_payment_methods + 
 			total_payment_methods_2
 		) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'any_other_enquires' AS topic,
+        'total_any_other_enquires' AS topic,
         SUM(total_any_other_enquires) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'cancellation_and_resale' AS topic,
+        'total_cancellation_and_resale' AS topic,
         SUM(total_cancellation_and_resale) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'matches' AS topic,
+        'total_matches' AS topic,
         SUM(total_matches) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'legal_documents' AS topic,
+        'total_legal_documents' AS topic,
         SUM(total_legal_documents) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'fan_id' AS topic,
+        'total_fan_id' AS topic,
         SUM(total_fan_id) AS total_interactions
     FROM five_language_ivr_total
     UNION ALL
     SELECT
-        'health_and_safety_measures' AS topic,
+        'total_health_and_safety_measures' AS topic,
         SUM(total_health_and_safety_measures) AS total_interactions
     FROM five_language_ivr_total
 )
@@ -143,5 +143,4 @@ SELECT
     topic,
     total_interactions
 FROM topic_totals
-ORDER BY total_interactions DESC
-LIMIT 5;
+ORDER BY total_interactions DESC;
