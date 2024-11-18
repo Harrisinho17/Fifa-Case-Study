@@ -60,24 +60,20 @@ The last step is to prepare the process to automatize future reports with simila
 
 ## Project Structure
 
-## -Python
-#### `1.Transpose_Data.py`
+### Python
+`1.Transpose_Data.py`
 - **Purpose**: The script transposes CSV files with a ‘Date’ column, copies “case_management.csv” unchanged, and saves them to an output folder. It skips files without a ‘Date’ column and logs the process. 
 
-
-#### `2.Rename_Column.py`
+`2.Rename_Column.py`
 - **Purpose**: This script renames the first column to “Date” in all CSV files in a folder and saves the updates, ensuring consistency across files.
 
-
-####  `3.Standardize_Columns.py`
+`3.Standardize_Columns.py`
 - **Purpose**: This script processes all CSV files in a folder by standardizing column names (making them lowercase, removing special characters, and handling duplicates), renaming the first column to “date,” converting it to a standardized date format, and saving the updates. It ensures consistent and clean data across all files.
 
-
-####  `4.Cleaned.py`
+`4.Cleaned.py`
 - **Purpose**: Processes CSV files by removing unnamed columns and adjusting “case_management.csv” by deleting its first row. Cleaned files are saved in a new folder with “cleaned_” added to their filenames.
 
-
-#### `ETL.py`
+`ETL.py`
 - **Purpose**: This script uploads cleaned CSV files to a PostgreSQL database, matching each file to a specific table. Date columns are updated to Date datatypes. It logs success or missing files, ensuring all available data is imported into the database.
 
 
@@ -102,12 +98,80 @@ The last step is to prepare the process to automatize future reports with simila
 
 
 #### Total IVR
+- `1_1_total_daily_peaks.sql`
+- **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset. 
 
+- `1_1_total_monthly_peaks.sql`
+- **Purpose**: Retrieves the Monthly instances of IVR usage in the Total_IVR dataset.
+
+- `1_1_total_weekly_peaks.sql` 
+- **Purpose**: Retrieves the Weekly instances of IVR usage in the Total_IVR dataset. 
+
+- `1_2_total_topics.sql`
+- **Purpose**: Retrieves the amount of interactions by topics ordering by DESC.
+
+- `1_3_total_IVR_effectiveness.sql`
+- **Purpose**: Retrieves the overall effectiveness of the IVR program. 
+
+- `1_4_total_stddev_by_topic.sql`
+- **Purpose**: Retrieves the standard deviation of topics. 
+
+- `1_5_total_weeks_and_weekends.sql` 
+- **Purpose**: Retrieves a weeks and weekends analysis breaking down the days with the most instances of IVR usage. 
+
+- `2_2_percentage_by_topic.sql`
+- **Purpose**: Retrieves the percentage of total IVR usage by topic. 
 
 ## -Data 
-#### AnalyzedData
+### AnalyzedData
+#### Case Management 
+**- cases_by_language.csv**
+**- total_cases_view.csv**
 
-#### CleanedData
+#### Languages
+##### 1_1_peak_analysis 
+Arabic
+**- Ar_daily_peaks.csv**  
+**- Ar_monthly_peaks.csv**  
+**- Ar_weekly_peaks.csv**
+
+English
+**- En_daily_peaks.csv**  
+**- En_monthly_peaks.csv**  
+**- En_weekly_peaks.csv**
+
+French
+**- Fr_daily_peaks.csv**  
+**- Fr_monthly_peaks.csv**  
+**- Fr_weekly_peaks.csv**
+
+German
+**- Ge_daily_peaks.csv**  
+**- Ge_monthly_peaks.csv**  
+**- Ge_weekly_peaks.csv**
+
+Spanish
+**- Sp_daily_peaks.csv**  
+**- Sp_monthly_peaks.csv**  
+**- Sp_weekly_peaks.csv**
+
+##### Top Five IVR
+**- 1_3_IVR_effectiveness.csv**  
+**- 1_4_stddev_by_topic.csv**  
+**- 1_5_weeks_and_weekends.csv**  
+**- 2_1_percentage_by_language.csv**  
+**- top_five_languages.csv**
+
+##### Total IVR
+**- 1_1_total_daily_peaks.csv**  
+**- 1_1_total_monthly_peaks.csv**  
+**- 1_1_total_weekly_peaks.csv**  
+**- 1_3_total_IVR_effectiveness.csv**  
+**- 1_4_total_stddev_by_topics.csv**  
+**- 2_2_percentage_by_topic.csv**
+
+
+### CleanedData
 **cleaned_case_management.csv**
 **cleaned_transposed_arabic_ivr.csv**
 **cleaned_transposed_english_ivr.csv**
@@ -116,7 +180,7 @@ The last step is to prepare the process to automatize future reports with simila
 **cleaned_transposed_spanish_ivr.csv**
 **cleaned_transposed_total_ivr.csv**
 
-#### RawData
+### RawData
 **Arabic.IVR.csv**
 **Case_Management.csv**
 **Englsih_IVR.csv**
@@ -126,7 +190,7 @@ The last step is to prepare the process to automatize future reports with simila
 **Spanish_IVR.csv**
 **Total_IVR.csv**
 
-#### TransposedData
+### TransposedData
 **case_management.csv**
 **transposed_arabic_ivr.csv**
 **transposed_english_ivr.csv**
