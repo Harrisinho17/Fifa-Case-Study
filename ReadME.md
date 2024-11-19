@@ -42,7 +42,7 @@ The last step is to prepare the process to automatize future reports with simila
 
 # Project Structure
 
-## Code
+##                             Code
 
 ### Python
 `1.Transpose_Data.py`
@@ -56,7 +56,7 @@ The last step is to prepare the process to automatize future reports with simila
 `ETL.py`
 - **Purpose**: This script uploads cleaned CSV files to a PostgreSQL database, matching each file to a specific table. Date columns are updated to Date datatypes. It logs success or missing files, ensuring all available data is imported into the database.
 
-### SQL
+###                             SQL
 Case Management
     - `total_cases_view.sql`
     - **Purpose**: Create a view of total sum of recieved ticket issues on all streams of information in 2022.
@@ -73,7 +73,8 @@ Languages
 
 
 #### Total IVR
-    - `1_1_total_daily_peaks.sql`
+
+   - `1_1_total_daily_peaks.sql`
 - **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset.
   
     - `1_1_total_monthly_peaks.sql`
@@ -98,7 +99,7 @@ Languages
 - **Purpose**: Retrieves the percentage of total IVR usage by topic. 
 
 ### Data 
-### AnalyzedData
+###                     Analyzed Data
 - Case Management 
     - `cases_by_language.csv`
     - `total_cases_view.csv`
@@ -146,7 +147,7 @@ Spanish
     - `2_2_percentage_by_topic.csv`
 
 
-### Cleaned Data
+###                     Cleaned Data
 - `cleaned_case_management.csv`
 - `cleaned_transposed_arabic_ivr.csv`
 - `cleaned_transposed_english_ivr.csv`
@@ -155,7 +156,7 @@ Spanish
 - `cleaned_transposed_spanish_ivr.csv`
 - `cleaned_transposed_total_ivr.csv`
 
-### Raw Data
+###                     Raw Data
 - `Arabic.IVR.csv`
 - `Case_Management.csv`
 - `Englsih_IVR.csv`
@@ -165,7 +166,7 @@ Spanish
 - `Spanish_IVR.csv`
 - `Total_IVR.csv`
 
-### TransposedData
+###                     Transposed Data
 - `case_management.csv`
 - `transposed_arabic_ivr.csv`
 - `transposed_english_ivr.csv`
