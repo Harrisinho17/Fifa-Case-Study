@@ -91,28 +91,28 @@ Languages
 
 #### Total IVR
 
-    - `1_1_total_daily_peaks.sql`
+   -     `1_1_total_daily_peaks.sql`
 - **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset.
   
-    - `1_1_total_monthly_peaks.sql`
+   - `1_1_total_monthly_peaks.sql`
 - **Purpose**: Retrieves the Monthly instances of IVR usage in the Total_IVR dataset.
   
-    - `1_1_total_weekly_peaks.sql` 
+   - `1_1_total_weekly_peaks.sql` 
 - **Purpose**: Retrieves the Weekly instances of IVR usage in the Total_IVR dataset.
   
-    - `1_2_total_topics.sql`
+   - `1_2_total_topics.sql`
 - **Purpose**: Retrieves the amount of interactions by topics ordering by DESC.
   
-    - `1_3_total_IVR_effectiveness.sql`
+   - `1_3_total_IVR_effectiveness.sql`
 - **Purpose**: Retrieves the overall effectiveness of the IVR program.
   
-    - `1_4_total_stddev_by_topic.sql`
+   - `1_4_total_stddev_by_topic.sql`
 - **Purpose**: Retrieves the standard deviation of topics.
   
-    - `1_5_total_weeks_and_weekends.sql` 
+   - `1_5_total_weeks_and_weekends.sql` 
 - **Purpose**: Retrieves a weeks and weekends analysis breaking down the days with the most instances of IVR usage.
   
-    - `2_2_percentage_by_topic.sql`
+   - `2_2_percentage_by_topic.sql`
 - **Purpose**: Retrieves the percentage of total IVR usage by topic. 
 
 ## Data 
