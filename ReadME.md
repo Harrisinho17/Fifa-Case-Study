@@ -24,13 +24,21 @@ The last step is to prepare the process to automatize future reports with simila
 5. **Is there more interactions during the week or during the weeknd?**
     - `weeks_and_weeknds.sql`, `total_weeks_and_weeknds.sql`
 
-### Language  Breakdown
+### Language Breakdown
 1. **What percentage of customer interactions come from each language?**
     - `percentage_by_language.sql`
 2. **What percentage of total interactions is contributed by each IVR topic?**
     - `percentage_by_toppic.sql`
 
+### 2022 Instances
 
+1. **What is the Year Over Year analysis based on the data given?**
+   -`YOY_IVR_analysis`
+
+2. **What is the spread of instances by langauge, source, and origin?**
+   - `instance_lanaguage.sql`
+   - `instance_origin.sql`
+   - `instance_source.sql`
 
 ## Tools and Technologies
 - **Programming Language**: Python
@@ -73,47 +81,83 @@ The last step is to prepare the process to automatize future reports with simila
 
 Case Management
 - `total_cases_view.sql`
-- **Purpose**: Create a view of total sum of recieved ticket issues on all streams of information in 2022.
-   
-- `cases_by_language.sql`
-- **Purpose**: SUM of instances by language. 
+   - **Purpose**: Create a view of total sum of recieved ticket issues on all streams of information in 2022.
+
+- `instance_language.sql`
+   - **Purpose**: SUM of instances by langauge recieved.
+
+- `instance_origin.sql`
+   - **Purpose**: SUM of instances by origin. 
+
+- `instance_source.sql`
+   - **Purpose**: SUM of instances by source.
+
+- `new_cases.sql`
+   - **Purpose**: Analysis of new cases by date. 
+
+- `total_ivr_instances_22_view.sql`
+   - **Purpose**: An analysis to create a view with the sum of all ivr instances by date in 2022. 
+
+
 
 Languages
-- `daily_peaks.sql`
-- **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
+- `1_1_daily_peaks.sql`
+   - **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
     
-- `weekly_peaks.sql`
-- **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language.
+- `1_1_weekly_peaks.sql`
+   - **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language.
     
-- `monthly_peaks.sql`
-- **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language. 
+- `1_1_monthly_peaks.sql`
+   - **Purpose**: Retrives the Sum of all instances excluding the return to main options by day for each language.
+
+- `1_2_total_topics.sql`
+   - **Purpose**: Retrives the Sum of all instances aggregating similar topics. 
+
+- `1_3_total_IVR_effectiveness.sql`
+   - **Purpose**: Retrieves overall effectiveness of IVR resposnes by comparing it to the total of transfer to agent over total instances. 
+
+- `1_4_total_stddev_by_topic.sql`
+   - **Purpose**: Retrieves the standard deviation of IVR topics. 
+
+- `1_5_total_weeks_and_weekends.sql.sql`
+   - **Purpose**: Retrieves spread of weeks and weekends and the average interactions per day.  
+
+- `2_2_percentage_by_topic.sql`
+   - **Purpose**: Calculates the percentage spread by topic usage in the IVR.  
+
 
 
 #### Total IVR
 
-   - `1_1_total_daily_peaks.sql`
-- **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset.
+- `1_1_total_daily_peaks.sql`
+   - **Purpose**: Retrive the daily instances of IVR usage in the Total_IVR dataset.
   
-   - `1_1_total_monthly_peaks.sql`
-- **Purpose**: Retrieves the Monthly instances of IVR usage in the Total_IVR dataset.
+- `1_1_total_monthly_peaks.sql`
+   - **Purpose**: Retrieves the Monthly instances of IVR usage in the Total_IVR dataset.
   
-   - `1_1_total_weekly_peaks.sql` 
-- **Purpose**: Retrieves the Weekly instances of IVR usage in the Total_IVR dataset.
+- `1_1_total_weekly_peaks.sql` 
+   - **Purpose**: Retrieves the Weekly instances of IVR usage in the Total_IVR dataset.
   
-   - `1_2_total_topics.sql`
-- **Purpose**: Retrieves the amount of interactions by topics ordering by DESC.
+- `1_2_total_topics.sql`
+   - **Purpose**: Retrieves the amount of interactions by topics ordering by DESC.
   
-   - `1_3_total_IVR_effectiveness.sql`
-- **Purpose**: Retrieves the overall effectiveness of the IVR program.
+- `1_3_total_IVR_effectiveness.sql`
+   - **Purpose**: Retrieves the overall effectiveness of the IVR program.
   
-   - `1_4_total_stddev_by_topic.sql`
-- **Purpose**: Retrieves the standard deviation of topics.
+- `1_4_total_stddev_by_topic.sql`
+   - **Purpose**: Retrieves the standard deviation of topics.
   
-   - `1_5_total_weeks_and_weekends.sql` 
-- **Purpose**: Retrieves a weeks and weekends analysis breaking down the days with the most instances of IVR usage.
+- `1_5_total_weeks_and_weekends.sql` 
+   - **Purpose**: Retrieves a weeks and weekends analysis breaking down the days with the most instances of IVR usage.
   
-   - `2_2_percentage_by_topic.sql`
-- **Purpose**: Retrieves the percentage of total IVR usage by topic. 
+- `2_2_percentage_by_topic.sql`
+   - **Purpose**: Retrieves the percentage of total IVR usage by topic. 
+
+- `total_ivr_instances_23_view.sql`
+   - **Purpose**: An analysis to create a view with the sum of all ivr instances by date in 2023. 
+
+- `YOY_IVR_analysis.sql`
+   - **Purpose**: Retrives the difference between the sums of total instances by month and gets a percentage of change. 
 
 ## Data 
 
@@ -124,38 +168,41 @@ Languages
 </div>
 
 - Case Management
-   - `cases_by_language.csv`
    - `total_cases_view.csv`
+   - `instance_language.csv`
+   - `instance_origin.csv`
+   - `instance_source.csv`
+   - `new_cases.csv`
 
 - Languages
 1_1_peak_analysis
 
-    - Arabic
+   - Arabic
       - `Ar_daily_peaks.csv`  
       - `Ar_monthly_peaks.csv`  
       - `Ar_weekly_peaks.csv`
     
-    - English
+   - English
        - `En_daily_peaks.csv`  
        - `En_monthly_peaks.csv`  
        - `En_weekly_peaks.csv`
     
-    - French
+   - French
        - `Fr_daily_peaks.csv`  
        - `Fr_monthly_peaks.csv`  
        - `Fr_weekly_peaks.csv`
     
-    - German
+   - German
        - `Ge_daily_peaks.csv`  
        - `Ge_monthly_peaks.csv`  
        - `Ge_weekly_peaks.csv`
     
-    - Spanish
+   - Spanish
        - `Sp_daily_peaks.csv`  
        - `Sp_monthly_peaks.csv`  
        - `Sp_weekly_peaks.csv`
     
-    - Top Five IVR
+   - Top Five IVR
        - `1_3_IVR_effectiveness.csv`  
        - `1_4_stddev_by_topic.csv`  
        - `1_5_weeks_and_weekends.csv`  
@@ -169,6 +216,8 @@ Languages
     - `1_3_total_IVR_effectiveness.csv`  
     - `1_4_total_stddev_by_topics.csv`  
     - `2_2_percentage_by_topic.csv`
+
+- `YOY_IVR_analysis.csv`
 
 
 <div align="center">
@@ -228,20 +277,8 @@ Languages
 
 
 # Conclusion 
-**Peak Instances Analysis** - 
-- Spanish
-- Arabic
-- English ( Had the most instances of IVR usage)
-- French
-- German
-- Total_IVR
 
-- total_ivr is different than the sum total of top 5 language IVR making it likely other langauges are involved that are not part of the data set I was given. 
+Overall this case study challenging but intriguing. The initial data set was well designed for human analysis and input however in order to analyze the data set with SQL I would need to complete some data formating scripts as well as removing and modifying null values within the dataset. The four python scripts that resulted were `1.transpose_data.py` which swapped the column names and dates on the diaganol axis which resulted in the dates on the rows side and the topics on the columns section. Case management was excluded from this trnasposing process as it was already in that format. It was still added to the transposed folder but without the prefix. The next issue I noticed was that the date column was not labled, my solution to this was `2.Rename_Colum.py`. The next one,`3.Standardize_columns.py`, worked to standardize the columns, handle special characters and convert all of the column names to lower case to make SQL scripts easier in PGAdmin. The final cleaning script was `4.Cleaned.py` and was meant to drop empty rows, and unanmed colums. I noticed the last column in the case_management dataset had an unamed column that had some months in it, this data correlated and was redundant as the dates were in the first column. I am aware these four scripts could have been implemented into one script however I was getting many errors and was running out of time to complete the case study. The final Python script was `ETL.py` and was meant to load the data from my folders to pgadmin without having to define each column. 
 
-**Instances Analysis Dashboard** - 
-- instances of IVR usage are more apparent during the week rather than the weekend. 
-- IVR effectiveness is 84% with the total IVR dataset. 
-- Standard deviation of IVR instances show that "already Submitted_application" had the highest variablity meaning that interaction counts for these topics fluctuate significantly, possibly due to external factors (More analysis required). 
 
-**Language Breakdown**
-
+During the intial analysis I found some interesting KPI's. I noticed the total IVR dataset's SUM of usage was more than the sum of the five sperate data sets specified by lanague. This lead me to beleive that the total IVR data set must include other langauges that were not included in the case study. For peak analysis I had to work with both the total data set and for each lanaguage so I found it best to do this one seperately and find trends in the data. After this I summed all of the langauges created a view and answered the rest of the questions with that data. 
