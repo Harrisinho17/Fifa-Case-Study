@@ -5,7 +5,7 @@ The expectation is that the candidate will be able to:
 
 Analyze the data to be prepared to answer some questions about the trends, such as: What are the peak seasons, do we have more calls/casses during weekdays or weeknds, etc. 
 
-It is also expected from the cnadidate to be able to identify some other trends in the data and, especually, to understand how thge condidate approaches the challenge of presenting these insights in a way that could be easily understandable to everyone.
+It is also expected from the candidate to be able to identify some other trends in the data and, especually, to understand how thge condidate approaches the challenge of presenting these insights in a way that could be easily understandable to everyone.
 
 The last step is to prepare the process to automatize future reports with similar data. 
 
