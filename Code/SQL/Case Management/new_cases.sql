@@ -1,5 +1,5 @@
 SELECT 
     date,
-	new_cases
+    new_cases
 FROM 
-  	case_management;
+    case_management;
